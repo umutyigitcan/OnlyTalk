@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "791388764805",
+    "firebase_url": "https://onlytalk-397a3-default-rtdb.firebaseio.com",
+    "project_id": "onlytalk-397a3",
+    "storage_bucket": "onlytalk-397a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791388764805:android:0c8d0e49396a884aa847ec",
+        "android_client_info": {
+          "package_name": "com.example.onlineenglish"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgEQRVMnrT6psZYpNESAe1dBxiAmSewCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791388764805:android:2cefc1bbb07a2bada847ec",
+        "android_client_info": {
+          "package_name": "com.example.onlytalk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgEQRVMnrT6psZYpNESAe1dBxiAmSewCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/girisSayfasi">
+
+    <fragment
+        android:id="@+id/girisSayfasi"
+        android:name="com.example.onlytalk.GirisSayfasi"
+        android:label="fragment_giris_sayfasi"
+        tools:layout="@layout/fragment_giris_sayfasi" >
+        <action
+            android:id="@+id/action_girisSayfasi_to_kayitSayfasi"
+            app:destination="@id/kayitSayfasi" />
+        <action
+            android:id="@+id/action_girisSayfasi_to_uygulamaButun"
+            app:destination="@id/uygulamaButun" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitSayfasi"
+        android:name="com.example.onlytalk.KayitSayfasi"
+        android:label="fragment_kayit_sayfasi"
+        tools:layout="@layout/fragment_kayit_sayfasi" />
+    <fragment
+        android:id="@+id/uygulamaButun"
+        android:name="com.example.onlytalk.UygulamaButun"
+        android:label="fragment_uygulama_butun"
+        tools:layout="@layout/fragment_uygulama_butun" />
+</navigation>

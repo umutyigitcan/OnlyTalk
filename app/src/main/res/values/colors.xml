@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="logorenk">#fffbfb</color>
+    <color name="butonmavisi">#0064e0</color>
+    <color name="kelimesavasibackground">#601c9c</color>
+    <color name="kelimesavasıkategori">#380c4c</color>
+</resources>
