@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_girisSayfasi_to_uygulamaButun"
             app:destination="@id/uygulamaButun" />
+        <action
+            android:id="@+id/action_girisSayfasi_to_arkadasEkleFragment"
+            app:destination="@id/arkadasEkleFragment" />
     </fragment>
     <fragment
         android:id="@+id/kayitSayfasi"
@@ -26,5 +29,24 @@
         android:id="@+id/uygulamaButun"
         android:name="com.example.onlytalk.UygulamaButun"
         android:label="fragment_uygulama_butun"
-        tools:layout="@layout/fragment_uygulama_butun" />
+        tools:layout="@layout/fragment_uygulama_butun" >
+        <action
+            android:id="@+id/action_uygulamaButun_to_sohbetKonusmaFragment"
+            app:destination="@id/sohbetKonusmaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sohbetKonusmaFragment"
+        android:name="com.example.onlytalk.SohbetKonusmaFragment"
+        android:label="fragment_sohbet_konusma"
+        tools:layout="@layout/fragment_sohbet_konusma" />
+    <fragment
+        android:id="@+id/arkadasEkleFragment"
+        android:name="com.example.onlytalk.ArkadasEkleFragment"
+        android:label="fragment_arkadas_ekle"
+        tools:layout="@layout/fragment_arkadas_ekle" >
+        <argument
+            android:name="kullaniciismi"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
 </navigation>
