@@ -8,11 +8,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
 class sohbetFragmentRVAdapter(var mContext:Context,var liste:List<RVADatalar>):RecyclerView.Adapter<sohbetFragmentRVAdapter.myViewPagerTutucu>() {
 
+    var  vt=KonusulanVeriTabaniYardimcisi(mContext)
     inner class myViewPagerTutucu(view: View):ViewHolder(view){
         var satirCardView:CardView
         var resim:ImageView
@@ -39,7 +41,8 @@ class sohbetFragmentRVAdapter(var mContext:Context,var liste:List<RVADatalar>):R
         holder.isim.text=tutucu.isim
         holder.resim.setImageResource(tutucu.resim)
         holder.satirCardView.setOnClickListener {
-            Toast.makeText(mContext,"${tutucu.isim} adlı kullanıcının sohbetine tıklandı...",Toast.LENGTH_SHORT).show()
+            KonusulanVeriTabaniYardimcisiDao().konusulanKisiDegistir(vt,tutucu.isim)
+            Navigation.findNavController(it).navigate(R.id.action_uygulamaButun_to_sohbetKonusmaFragment)
         }
     }
 

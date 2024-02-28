@@ -1,5 +1,6 @@
 package com.example.onlytalk
 
+import SohbetBaslatmaRVA
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,8 +24,12 @@ class ArkadasEkleFragment : Fragment() {
         tasarim= FragmentArkadasEkleBinding.inflate(inflater,container,false)
         tasarim.rv.setHasFixedSize(true)
         var vt=VeriTabaniYardimcisi(requireContext())
+        var vt2=SohbetSQLite(requireContext())
         tasarim.rv.layoutManager=StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL)
         data=ArrayList()
+        tasarim.yazi.setOnClickListener{
+            SohbetSQLiteDao().sohbetleriSil(vt2)
+        }
 
 
 

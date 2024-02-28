@@ -5,30 +5,88 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BADFDC"
     tools:context=".SohbetFragment">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/butonmavisi"
-        app:layout_constraintHeight_percent="0.075"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:text="Sohbet etmek istediğiniz kişiyi seçiniz"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/yesil"
+        android:id="@+id/tb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/yazi"/>
+        android:layout_height="80dp">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/resim"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/logo"
+            android:layout_marginStart="10dp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/resim"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Umut"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/kisiisim"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/baseline_more_vert_24"
+            android:id="@+id/secenekler"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/girdi"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.06"
+        android:background="@drawable/mesajgirdishape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Mesaj gönder.."
+        android:textColor="@color/black"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/sendicon"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/gonder"
+        app:layout_constraintStart_toEndOf="@id/girdi"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:id="@+id/rv"
+        android:background="#BADFDC"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/yazi"
-        android:id="@+id/rv"
-        app:layout_constraintBottom_toBottomOf="parent"
-         />
+        app:layout_constraintTop_toBottomOf="@id/tb"
+        app:layout_constraintBottom_toTopOf="@id/girdi"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

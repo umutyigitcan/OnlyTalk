@@ -16,7 +16,7 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Sohbet başlatmak istediğiniz kullanıcıyı seçiniz"
+        android:text="Sohbet etmek istediğiniz kişiye tıklayınız"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

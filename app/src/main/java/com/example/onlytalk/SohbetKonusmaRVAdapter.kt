@@ -15,6 +15,7 @@ import com.google.firebase.database.ValueEventListener
 class SohbetKonusmaRVAdapter(var mContext:Context,var liste:ArrayList<SohbetKonusmaData>):RecyclerView.Adapter<SohbetKonusmaRVAdapter.myCardViewTutucu>(){
     var database=FirebaseDatabase.getInstance()
     var diyalog=database.getReference("diyalog")
+    private var konusan=""
 
     inner class myCardViewTutucu(view:View):ViewHolder(view){
 
@@ -32,8 +33,15 @@ class SohbetKonusmaRVAdapter(var mContext:Context,var liste:ArrayList<SohbetKonu
     }
 
     override fun onBindViewHolder(holder: myCardViewTutucu, position: Int) {
+        var vt=VeriTabaniYardimcisi(mContext)
+        var konusuanliste=KullaniciDataDao().bilgiGetir(vt)
+
+
+        for(k in konusuanliste){
+            konusan=k.kullaniciadi
+        }
         var tutucu=liste[position]
-        if(tutucu.kullanici=="umut"){
+        if(tutucu.kullanici==konusan){
 
             holder.balonsag.text=tutucu.mesaj
             holder.balonsol.visibility=View.INVISIBLE

@@ -3,5 +3,5 @@ package com.example.onlytalk
 import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
-data class KullaniciKayit(var kullaniciadi:String?="",var kullanicisifre:String?="",var kullaniciid:Int?=0) {
+data class FirebaseSohbetBaslatmaData(var isim:String?="",var resim:Int?=0,var saat:String?="") {
 }

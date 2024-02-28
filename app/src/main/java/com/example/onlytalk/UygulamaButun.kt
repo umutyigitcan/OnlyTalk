@@ -25,8 +25,8 @@ class UygulamaButun : Fragment() {
         fragmentListesi.add(ProfilFragment())
 
         fragmentBaslikListesi= ArrayList()
-        fragmentBaslikListesi.add("Sohbetler")
-        fragmentBaslikListesi.add("Sohbet Başlat")
+        fragmentBaslikListesi.add("TOPLU SOHBET")
+        fragmentBaslikListesi.add("ÖZEL SOHBET")
         fragmentBaslikListesi.add("Profil")
 
         val adapter=myViewPagerAdapter(requireActivity())

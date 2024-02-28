@@ -24,7 +24,11 @@
         android:id="@+id/kayitSayfasi"
         android:name="com.example.onlytalk.KayitSayfasi"
         android:label="fragment_kayit_sayfasi"
-        tools:layout="@layout/fragment_kayit_sayfasi" />
+        tools:layout="@layout/fragment_kayit_sayfasi" >
+        <action
+            android:id="@+id/action_kayitSayfasi_to_girisSayfasi"
+            app:destination="@id/girisSayfasi" />
+    </fragment>
     <fragment
         android:id="@+id/uygulamaButun"
         android:name="com.example.onlytalk.UygulamaButun"
