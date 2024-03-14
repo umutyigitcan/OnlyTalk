@@ -37,6 +37,12 @@
         <action
             android:id="@+id/action_uygulamaButun_to_sohbetKonusmaFragment"
             app:destination="@id/sohbetKonusmaFragment" />
+        <action
+            android:id="@+id/action_uygulamaButun_to_girisSayfasi"
+            app:destination="@id/girisSayfasi" />
+        <action
+            android:id="@+id/action_uygulamaButun_to_hesapAyarlar"
+            app:destination="@id/hesapAyarlar" />
     </fragment>
     <fragment
         android:id="@+id/sohbetKonusmaFragment"
@@ -53,4 +59,26 @@
             app:argType="string"
             android:defaultValue="null" />
     </fragment>
+    <fragment
+        android:id="@+id/hesapAyarlar"
+        android:name="com.example.onlytalk.HesapAyarlar"
+        android:label="fragment_hesap_ayarlar"
+        tools:layout="@layout/fragment_hesap_ayarlar" >
+        <action
+            android:id="@+id/action_hesapAyarlar_to_kullaniciAdiDegistir"
+            app:destination="@id/kullaniciAdiDegistir" />
+        <action
+            android:id="@+id/action_hesapAyarlar_to_sifredegistir"
+            app:destination="@id/sifredegistir" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciAdiDegistir"
+        android:name="com.example.onlytalk.KullaniciAdiDegistir"
+        android:label="fragment_kullanici_adi_degistir"
+        tools:layout="@layout/fragment_kullanici_adi_degistir" />
+    <fragment
+        android:id="@+id/sifredegistir"
+        android:name="com.example.onlytalk.Sifredegistir"
+        android:label="fragment_sifredegistir"
+        tools:layout="@layout/fragment_sifredegistir" />
 </navigation>

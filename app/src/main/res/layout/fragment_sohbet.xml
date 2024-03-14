@@ -8,44 +8,23 @@
     android:background="#BADFDC"
     tools:context=".SohbetFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:background="@color/yesil"
-        android:id="@+id/tb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="80dp">
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/resim"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/logo"
-            android:layout_marginStart="10dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/resim"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Umut"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/kisiisim"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.075"
+            android:text="Toplu Sohbet"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/baseline_more_vert_24"
-            android:id="@+id/secenekler"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:gravity="center"
+            android:background="@color/yesil"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/yazi"/>
+
+
 
 
     <EditText
@@ -82,7 +61,7 @@
         android:background="#BADFDC"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tb"
+        app:layout_constraintTop_toBottomOf="@id/yazi"
         app:layout_constraintBottom_toTopOf="@id/girdi"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"

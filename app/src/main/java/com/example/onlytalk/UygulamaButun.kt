@@ -20,13 +20,13 @@ class UygulamaButun : Fragment() {
         tasarim= FragmentUygulamaButunBinding.inflate(inflater,container,false)
 
         fragmentListesi= ArrayList()
-        fragmentListesi.add(SohbetFragment())
         fragmentListesi.add(ArkadasEkleFragment())
+        fragmentListesi.add(SohbetFragment())
         fragmentListesi.add(ProfilFragment())
 
         fragmentBaslikListesi= ArrayList()
-        fragmentBaslikListesi.add("TOPLU SOHBET")
         fragmentBaslikListesi.add("ÖZEL SOHBET")
+        fragmentBaslikListesi.add("TOPLU SOHBET")
         fragmentBaslikListesi.add("Profil")
 
         val adapter=myViewPagerAdapter(requireActivity())

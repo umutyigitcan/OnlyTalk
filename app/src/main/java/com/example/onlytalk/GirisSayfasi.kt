@@ -1,6 +1,7 @@
 
 package com.example.onlytalk
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -19,23 +20,19 @@ import com.google.firebase.database.ValueEventListener
 class GirisSayfasi : Fragment() {
 
     private lateinit var tasarim:FragmentGirisSayfasiBinding
-
+    var kullaniciadi:String?=null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         tasarim= FragmentGirisSayfasiBinding.inflate(inflater,container,false)
-
         var vt=VeriTabaniYardimcisi(requireContext())
-
-
+        var kullanici=KullaniciDataDao().bilgiGetir(vt)
+        for(k in kullanici){
+            kullaniciadi=k.kullaniciadi
+        }
 
         val database=FirebaseDatabase.getInstance()
         val refKisiler=database.getReference("Kullanicilar")
-
-
-
         tasarim.giris.setOnClickListener {
-
             refKisiler.addValueEventListener(object :ValueEventListener{
-
                 override fun onDataChange(ds: DataSnapshot) {
                     for(p in ds.children){
                         val kisi=p.getValue(KullaniciKayit::class.java)
@@ -43,11 +40,10 @@ class GirisSayfasi : Fragment() {
                             val key =p.key
                             var g1=kisi.kullaniciadi.toString()
                             var g2=kisi.kullanicisifre.toString()
-
                             if(tasarim.girdikullaniciadi.text.toString().trim()==g1&&tasarim.girdikullanicisifre.text.toString().trim()==g2){
+
                                 Navigation.findNavController(it).navigate(R.id.action_girisSayfasi_to_uygulamaButun)
                                 KullaniciDataDao().girisYap(vt,g1)
-
                             }
                         }
                     }
@@ -61,5 +57,4 @@ class GirisSayfasi : Fragment() {
         }
         return tasarim.root
     }
-
 }
